@@ -1,0 +1,51 @@
+// @use "sass:math";
+
+// $grid-columns: 12;
+
+// .container {
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 auto;
+// }
+
+// .row {
+//   display: flex;
+//   flex-flow: row wrap;
+// }
+
+// @include breakpoints(xs) {
+//   @for $i from 1 through $grid-columns {
+//     .col-sm-#{$i} {
+//       flex-grow: 0;
+//       width: percentage(math.div($i, $grid-columns));
+//     }
+//   }
+// }
+
+// @include breakpoints(sm) {
+//   @for $i from 1 through $grid-columns {
+//     .col-sm-#{$i} {
+//       flex-grow: 0;
+//       width: percentage(math.div($i, $grid-columns));
+//     }
+//   }
+// }
+
+// @include breakpoints(md) {
+//   @for $i from 1 through $grid-columns {
+//     .col-md-#{$i} {
+//       flex-grow: 0;
+//       width: percentage(math.div($i, $grid-columns));
+//     }
+//   }
+// }
+
+// @include breakpoints(lg) {
+//   @for $i from 1 through $grid-columns {
+//     .col-lg-#{$i} {
+//       flex-grow: 0;
+//       width: percentage(math.div($i, $grid-columns));
+//     }
+//   }
+// }

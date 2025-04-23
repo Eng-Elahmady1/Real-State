@@ -1,0 +1,349 @@
+// Start Landing
+.landing {
+  .container {
+    @include flex;
+    margin: $base-margin * 4 auto;
+
+    .content {
+      margin: 0;
+      .boxs {
+        margin: $base-margin * 6 0;
+      }
+    }
+    .image {
+      border: $base-border-thikness solid $bg-color;
+      border-radius: $base-border-radius * 2;
+      box-shadow: 0 0 10px $bg-color;
+      overflow: hidden;
+
+      &:hover img {
+        transition: $main-transition * 5;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+// End Landing
+
+// Start value
+.value {
+  margin: $base-margin * 5 0;
+  .container {
+    @include flex;
+
+    .text {
+      flex-basis: 40%;
+
+      h3 {
+        font-size: $base-font-size * 4;
+        font-weight: normal;
+      }
+
+      p {
+        margin: $base-margin * 2 0;
+        color: $text-color;
+        font-size: $base-font-size * 1.6;
+        line-height: 1.4;
+      }
+    }
+
+    .content {
+      @include grid(250px);
+      gap: 60px;
+      border: $base-border-thikness*3 solid $bg-color;
+      border-radius: $base-border-radius * 2;
+      padding: $base-padding * 3;
+      box-shadow: 0 0 30px $bg-color;
+
+
+      .box {
+        .head {
+          display: flex;
+          gap: $base-gap;
+          margin-bottom: $base-margin * 2;
+          align-items: center;
+
+          i {
+            @include centring;
+            width: 50px;
+            height: 50px;
+            font-size: $base-font-size * 2;
+            border: $base-border-thikness solid $primary-color;
+            border-radius: 50%;
+            color: $primary-color;
+            transition: $main-transition;
+
+            &:hover {
+              background-color: $primary-color;
+              color: $white-color;
+            }
+          }
+        }
+
+        p {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+// End value
+
+// Start Achievments
+.achievments{
+  margin: $base-margin*12 0;
+  .container{
+    .content{
+      @include flex;
+      gap: $base-gap*1.5;
+
+      .card{
+        padding: $base-padding*3;
+        border: $base-border-thikness*3 solid $border-color;
+        border-radius: $base-border-radius*2;
+        box-shadow: 0 0 30px $bg-color;
+        transition: $main-transition;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+
+        p{
+          line-height: 1.3;
+          font-size: $base-font-size*1.5;
+          color: $text-color;
+          margin-top:$base-margin*2.5;
+        }
+      }
+    }
+  }
+}
+// End Achievments 
+
+// Start Road 
+.road{
+  margin: $base-margin*12 0;
+
+  .container{
+    .road-map{
+      @include grid(350px);
+      gap: $base-gap*1.5;
+
+      .box{
+        h4{
+          font-size: $base-font-size*2;
+          border-left: $base-border-thikness solid rgb(112 59 247 / 74%);
+          padding: $base-padding;
+          font-weight: normal;
+        }
+
+        .text{
+          padding: $base-padding*3;
+          border: $base-border-thikness solid $border-color;
+          border-radius: 0 $base-border-radius*2 $base-border-radius*2 $base-border-radius*2;
+          position: relative;
+          background-color: black;
+
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90px;
+            height: 90px;
+            box-shadow: 0px 0px 10px #703BF7;
+            z-index: -88;
+          }
+          
+          p{
+            margin-top: $base-margin*2;
+            font-size: $base-font-size*1.5;
+            color: $text-color;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
+// End Road 
+
+// Start Team 
+.team{
+  margin: $base-margin*12 0;
+
+  .container{
+    .team-member{
+      @include flex;
+      gap: $base-gap;
+      &:hover .card:not(:hover){
+        opacity: 0.5;
+        filter: blur(1px);
+      }
+      .card{
+        padding: $base-padding*2;
+        border: $base-border-thikness solid $border-color;
+        border-radius: $base-border-radius*2;
+        transition: $main-transition;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+        .image{
+          position: relative;
+          img{
+            max-width: 100%;
+          }
+
+          i{
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 40px;
+            background-color: $primary-color;
+            @include centring;
+            border-radius: $base-border-radius*4;
+            transition: $main-transition/2;
+            
+            cursor: pointer;
+            &:hover{
+              font-size: $base-font-size*2;
+            }
+          }
+        }
+
+        .text{
+          text-align: center;
+          margin: $base-margin*4 0 $base-margin*2;
+
+          p{
+            font-size: $base-font-size*1.2;
+            margin-top: $base-margin;
+            color: $text-color
+          }
+        }
+
+        .message{
+          @include flex;
+          border: $base-border-thikness solid $border-color;
+          border-radius: $base-border-radius*6;
+          background-color: $bg-color;
+          padding:$base-padding $base-padding*1.5;
+
+          p{
+            font-size: $base-font-size*1.3;
+          }
+
+          i{
+            width: 30px;
+            height: 30px;
+            @include centring;
+            background-color: $primary-color;
+            border-radius: 50%;
+            cursor: pointer;
+
+          }
+        }
+      }
+    }
+  }
+}
+// End Team 
+
+// Start clients 
+.client{
+  margin: $base-margin*12 0;
+  .container{
+    .info{
+      @include flex;
+      gap: $base-gap;
+      margin-bottom: $base-margin*2;
+      
+      .box{
+        padding: $base-padding*4;
+        border: $base-border-thikness solid $border-color;
+        border-radius: $base-border-radius*2;
+        transition: $main-transition;
+        
+        &:hover{
+          transform: translateY(-10px);
+          border-color: $primary-color;
+          
+          .opinion{
+            border-color: $primary-color;
+          }
+
+          .date{
+            .btn{
+              border-color: $primary-color
+            }
+          }
+        }
+
+        .date{
+          @include flex;
+          margin-bottom: $base-margin*3;
+          .text{
+            p{
+              color: $text-color;
+              margin-bottom: $base-margin;
+            }
+            h3{
+              font-size: $base-font-size*2;
+            }
+          }
+
+          .btn{
+            background-color: $bg-color;
+            padding: $base-padding*1.5;
+            border: $base-border-thikness solid $border-color;
+
+            &:hover{
+              background-color: $primary-color;
+            }
+          }
+        }
+
+        .details{
+          @include flex;
+          margin-bottom: $base-margin*3;
+
+          .category{
+            border-left: $base-border-thikness solid $text-color;
+            padding-inline-start: $base-padding*3 ;
+          }
+          p{
+            display: flex;
+            gap: $base-gap/2;
+            align-items: center;
+            color: $text-color;
+            margin-bottom: $base-margin/2;
+          }
+
+          h3{
+            font-size: $base-font-size*1.5;
+          }
+        }
+
+        .opinion{
+          padding: $base-padding*2;
+          border: $base-border-thikness solid $border-color;
+          border-radius: $base-border-radius*2;
+          transition: $main-transition;
+
+          h4{
+            color: $text-color;
+            margin-bottom: $base-margin;
+          }
+
+          p{
+            font-size: $base-font-size*1.3;
+          }
+        }
+      }
+    }
+  }
+}
+// End clients 

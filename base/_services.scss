@@ -1,0 +1,137 @@
+// Start Landing
+.serv-landing {
+  .container {
+    .content {
+      width: 80%;
+    }
+  }
+}
+
+// Start Unlock 
+.unlock,
+.managment {
+  .container {
+    .boxs {
+      @include grid(350px);
+
+      .box {
+        padding: $base-padding * 3;
+        border-radius: $base-border-radius * 2;
+        border: $base-border-thikness solid $black-text;
+        position: relative;
+        box-shadow: 0 0 10px $border-color;
+        &:last-child{
+          grid-column: span 2;
+        }
+        .content {
+          .icon {
+            display: flex;
+            align-items: center;
+            gap: $base-gap;
+            margin-bottom: $base-margin * 2;
+
+            p {
+              font-size: $base-font-size * 2;
+            }
+
+            .icon-shape {
+              width: 85px;
+              height: 85px;
+              @include centring;
+              border-radius: 50%;
+              position: relative;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-top: $base-border-thikness solid $primary-color;
+                border-bottom: $base-border-thikness solid $primary-color;
+                border-radius: 50%;
+                transform: rotate(-20deg);
+                animation: rotate-right 4s linear infinite;
+              }
+
+              &::after {
+                content: "";
+                height: 20px;
+                width: 100%;
+                position: absolute;
+                background-color: $black-color;
+                transform: rotate(-20deg);
+                animation: rotate-right 4s linear infinite;
+              }
+
+              span {
+                width: 65px;
+                height: 65px;
+                @include centring;
+                border-radius: 50%;
+                position: relative;
+                z-index: 9;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 60px;
+                  height: 60px;
+                  border-top: $base-border-thikness solid $primary-color;
+                  border-bottom: $base-border-thikness solid $primary-color;
+                  border-radius: 50%;
+                  transform: rotate(-18deg);
+                  animation: rotate-right 2s linear infinite;
+                }
+
+                &::after {
+                  content: "";
+                  height: 20px;
+                  width: 100%;
+                  position: absolute;
+                  background-color: $black-color;
+                  transform: rotate(-20deg);
+                  animation: rotate-right 2s linear infinite;
+                }
+
+                i {
+                  position: relative;
+                  z-index: 9;
+                  color: $primary-color;
+                  font-size: $base-font-size * 2;
+                }
+              }
+            }
+          }
+
+          h4 {
+            color: $text-color;
+          }
+        }
+      }
+
+      &:last-child{
+        .text{
+            @include flex;
+            margin-bottom: $base-margin*3;
+
+            h3{
+                flex: 1;
+            }
+
+            .btn{
+                background-color: $primary-color;
+                outline: none;
+                border: none;
+                color: $white-color;
+                box-shadow: 0 0 10px $border-color;
+            }
+        }
+
+        p{
+            font-size: $base-font-size*1.4;
+            color: $text-color;
+        }
+      }
+    }
+  }
+}

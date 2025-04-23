@@ -1,0 +1,270 @@
+@media (min-width: 768px) {
+  .header {
+    .toggle {
+      display: none;
+    }
+  }
+
+  .nav-bar {
+    .container {
+      .nav-bar-1 {
+        .search-btn {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    .links {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      background-color: $bg-color;
+      justify-content: initial !important;
+      align-items: initial !important;
+      transition: 0.5s;
+      transform: translateX(-100%);
+      li {
+        padding: $base-padding * 2 0;
+        a {
+          padding: $base-padding * 3 $base-padding * 2 !important;
+
+          &.active {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .toggle {
+      display: block;
+      &:focus + .links {
+        transform: translateX(0%);
+      }
+    }
+
+    .btn {
+      display: none;
+    }
+  }
+
+  .landing {
+    margin: $base-margin * 2 0;
+    .content {
+      h3 {
+        font-size: $base-font-size * 3;
+        text-align: left !important;
+      }
+      p {
+        line-height: 1.2;
+        text-align: left !important;
+        font-size: $base-font-size * 1.4 !important;
+      }
+      .buttons {
+        margin: $base-margin * 4 auto;
+        .btn {
+          display: block;
+          width: 350px;
+          text-align: center;
+          margin: $base-margin auto;
+        }
+      }
+      .boxs {
+        display: block;
+        .box {
+          margin: $base-margin auto;
+          width: 350px;
+        }
+      }
+    }
+    .image {
+      display: block !important;
+      margin-bottom: $base-margin * 3;
+      img {
+        border-radius: $base-border-radius * 2;
+      }
+    }
+  }
+
+  .banner {
+    .boxs {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+
+  .journey {
+    align-items: center !important;
+    .section-head {
+      flex-direction: column !important;
+      gap: $base-gap * 1.5 !important;
+
+      .btn {
+        margin: auto;
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      flex-direction: column;
+
+      .home,
+      .about-us,
+      .properties,
+      .services,
+      .contact-us {
+        margin: $base-margin 0;
+      }
+    }
+  }
+
+  .footer-links {
+    .container {
+      flex-direction: column;
+      gap: $base-gap;
+    }
+  }
+
+  .contact {
+    display: flex !important;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: $base-border-thikness solid $primary-color;
+    border-radius: 50%;
+    background-color: $primary-color;
+    @include centring;
+
+    i {
+      color: $white-color;
+      font-size: $base-font-size * 2;
+    }
+  }
+
+  .nav-bar {
+    margin: $base-margin*3 0;
+    .container {
+      .nav-bar-1 {
+        width: 100%!important;
+        margin-top: $base-margin*6!important;
+        margin-bottom: $base-margin*2!important;
+        border-radius: $base-border-radius*2!important;
+        .input-box {
+          input {
+            &::placeholder {
+              font-size: $base-font-size!important;
+            }
+          }
+        }
+
+        .button {
+          display: none;
+        }
+
+        .search-btn {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .landing {
+    margin: $base-margin * 2 0;
+    flex-direction: column-reverse;
+    padding: $base-padding * 2.5;
+
+    .dotted-loader {
+      display: none;
+    }
+    .image {
+      display: none;
+    }
+    .content {
+      text-align: center;
+      margin: auto !important;
+      flex-basis: 100%;
+
+      p {
+        font-size: 16px;
+      }
+
+      .buttons {
+        margin: 45px 0;
+
+        .btn {
+          margin: 20px auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .banner {
+    border: none;
+  }
+
+  .main-title {
+    flex-direction: column;
+    margin: $base-margin * 4 0 !important;
+
+    .text {
+      h2 {
+        margin-bottom: $base-margin * 1.5;
+      }
+    }
+
+    .btn-title {
+      margin: auto;
+      margin-top: $base-margin * 2;
+    }
+  }
+
+  .value {
+    .container {
+      flex-direction: column !important;
+      gap: $base-gap * 2;
+    }
+  }
+
+  .achievments {
+    margin: $base-margin * 4 0 !important;
+    .container {
+      .content {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .road {
+    margin: $base-margin * 4 0 !important;
+  }
+
+  .team {
+    margin: $base-margin * 4 0 !important;
+    .container {
+      .team-member {
+        flex-direction: column;
+        gap: $base-gap * 2 !important;
+      }
+    }
+  }
+
+  .client {
+    margin: $base-margin * 4 0 !important;
+    .container {
+      .info {
+        flex-direction: column;
+      }
+    }
+  }
+}

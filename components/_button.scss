@@ -1,0 +1,13 @@
+.btn {
+  background-color: $black-color;
+  padding: $base-padding $base-padding*1.5;
+  border-radius: $base-border-radius;
+  transition: $main-transition*1.5;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: $primary-color;
+    box-shadow: 0 5px 10px $black-color;
+  }
+}

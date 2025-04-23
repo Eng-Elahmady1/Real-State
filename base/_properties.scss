@@ -1,0 +1,256 @@
+// Start Landing
+.sec-landing {
+  height: 400px;
+  @include centring;
+  background-color: #26262673;
+
+  .container {
+    .content {
+      h3 {
+        font-size: $base-font-size * 3;
+        margin-bottom: $base-margin * 3;
+      }
+
+      p {
+        color: $text-color;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+// End Landing
+
+// Start Nav
+.nav-bar {
+  margin-top: -38px;
+  transition: $main-transition;
+
+  .container {
+    .nav-bar-1 {
+      @include flex;
+      padding: $base-padding * 1.5;
+      border: $base-border-thikness * 5 solid #262626;
+      border-radius: $base-border-radius * 2 $base-border-radius * 2 0 0;
+      width: 80%;
+      margin: auto;
+      background-color: $black-color;
+      box-shadow: 0 0 10px $border-color;
+
+      .input-box {
+        width: 70%;
+
+        input {
+          color: $white-color;
+          border: none;
+          outline: none;
+          width: 100%;
+          background-color: transparent;
+          caret-color: $primary-color;
+          padding: $base-padding;
+
+          &::placeholder {
+            font-size: $base-font-size * 1.5;
+            padding-left: 10px;
+          }
+        }
+      }
+
+      .button {
+        position: relative;
+        .btn {
+          background-color: $primary-color;
+          padding-left: $base-padding * 4;
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 10px;
+          margin-right: 5px;
+        }
+      }
+
+      .search-btn {
+        i {
+          width: 60px;
+          height: 40px;
+          background-color: $primary-color;
+          @include centring;
+          border-radius: $base-border-radius;
+        }
+      }
+    }
+
+    .nav-bar-2 {
+      @include grid(200px);
+      padding: $base-padding * 1.5;
+      border: $base-border-thikness * 5 solid #262626;
+      border-radius: $base-border-radius * 2;
+      box-shadow: 0 0 10px $border-color;
+
+      .box {
+        @include flex;
+        padding: $base-padding;
+        border: $base-border-thikness solid $border-color;
+        border-radius: $base-border-radius * 2;
+        transition: $main-transition;
+
+        .info {
+          display: flex;
+          gap: $base-gap;
+          align-items: center;
+
+          p {
+            color: $text-color;
+            border-left: $base-border-thikness solid $border-color;
+            padding-inline-start: $base-padding;
+          }
+        }
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          @include centring;
+          background-color: $bg-color;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .nav-bar-1,
+    .nav-bar-2 {
+      box-shadow: 0 0 10px $primary-color;
+    }
+    .nav-bar-2 {
+      .box {
+        border-color: $primary-color;
+
+        .info {
+          p {
+            border-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+// End Nav
+
+.information {
+  .container {
+    .content {
+      padding: $base-padding * 4;
+      border: $base-border-thikness solid $border-color;
+      border-radius: $base-border-radius * 2;
+      transition: $main-transition;
+
+      &:hover {
+        border-color: $primary-color;
+      }
+      .form {
+        @include grid(250px);
+        gap: $base-gap;
+
+        .input-box {
+          label {
+            width: 100%;
+            display: block;
+            margin-bottom: $base-margin;
+          }
+          .select-box {
+            width: 100%;
+            height: 50px;
+            padding: 0 10px;
+            background-color: $bg-color;
+            caret-color: $primary-color;
+            color: $white-color;
+            outline: none;
+            border: none;
+            border-radius: $base-border-radius;
+            border: $base-border-thikness solid #262626;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            select {
+              width: 100%;
+              background-color: transparent;
+              border: 0;
+              color: #666666;
+              outline: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              cursor: pointer;
+              option {
+                background-color: #ddd;
+                color: #333;
+                padding: 10px;
+                font-size: 14px;
+              }
+            }
+            i {
+              color: #666666;
+            }
+          }
+          input {
+            width: 100%;
+            height: 50px;
+            padding: 0 10px;
+            background-color: $bg-color;
+            caret-color: $primary-color;
+            color: $white-color;
+            outline: none;
+            border: none;
+            border-radius: $base-border-radius;
+            border: $base-border-thikness solid #262626;
+            &::placeholder {
+              padding-left: $base-padding/2;
+            }
+
+            &:focus {
+              border-color: $primary-color;
+            }
+          }
+        }
+      }
+      .textarea {
+        margin: $base-margin * 2 0;
+        label {
+          width: 100%;
+          display: block;
+          margin-bottom: $base-margin;
+        }
+
+        textarea {
+          width: 100%;
+          height: 100px;
+          resize: none;
+          background-color: $bg-color;
+          color: $white-color;
+          outline: none;
+          border: none;
+          border-radius: $base-border-radius;
+          border: $base-border-thikness solid $border-color;
+
+          &:focus {
+            border-color: $primary-color;
+          }
+        }
+      }
+      .submit {
+        @include flex;
+        .privacy {
+          label {
+            color: $text-color;
+          }
+        }
+
+        .btn {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
