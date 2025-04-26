@@ -308,10 +308,18 @@ a {
 .banner .boxs .box .content .icon-shape span i {
   position: relative;
   z-index: 9;
+  color: #703BF7;
 }
 .banner .boxs .box .content p {
   font-size: 15px;
   margin-top: 20px;
+}
+.banner .boxs .box .content .links {
+  margin-top: 20px;
+}
+.banner .boxs .box .content .links a {
+  padding-inline-end: 5px;
+  text-decoration: underline;
 }
 .banner .boxs .box .arrow {
   position: absolute;
@@ -806,6 +814,16 @@ a {
   }
   .nav-bar .container .nav-bar-1 .search-btn {
     display: block !important;
+  }
+  .unlock .boxs .box:last-child,
+  .managment .boxs .box:last-child {
+    grid-column: span 1 !important;
+  }
+  .office .content-up .tab-content .up-card {
+    flex-direction: column;
+  }
+  .office .content-up .tab-content .up-card .contact-box .info-items {
+    flex-direction: column;
   }
 }
 @media (max-width: 992px) {
@@ -1464,6 +1482,7 @@ a {
 .information .container .content .textarea textarea {
   width: 100%;
   height: 100px;
+  padding: 10px;
   resize: none;
   background-color: #1A1A1A;
   color: #ffffff;
@@ -1618,5 +1637,133 @@ a {
 .unlock .container .boxs:last-child p,
 .managment .container .boxs:last-child p {
   font-size: 14px;
+  color: #999999;
+}
+
+.information .container .content .contact-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.office .container .content-up .tabs {
+  display: flex;
+  flex-direction: column;
+}
+.office .container .content-up .tab-labels {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 30px;
+  background-color: #1A1A1A;
+  border-radius: 10px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.office .container .content-up .tab-labels label {
+  padding: 10px 30px;
+  background: #1A1A1A;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 2px solid #373737;
+}
+.office .container .content-up input[type=radio] {
+  display: none;
+}
+.office .container .content-up .tab-content {
+  display: none;
+}
+.office .container .content-up .tab-content .up-card {
+  display: flex;
+  gap: 15px;
+}
+.office .container .content-up .tab-content .up-card .contact-box {
+  padding: 10px;
+  border: 1px solid #373737;
+  padding: 15px;
+  border-radius: 10px;
+  flex-basis: 50%;
+}
+.office .container .content-up .tab-content .up-card .contact-box small {
+  font-size: 13px;
+}
+.office .container .content-up .tab-content .up-card .contact-box h2 {
+  margin: 20px 0;
+}
+.office .container .content-up .tab-content .up-card .contact-box p {
+  color: #999999;
+}
+.office .container .content-up .tab-content .up-card .contact-box .info-items {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.office .container .content-up .tab-content .up-card .contact-box .info-items .info-item {
+  border: 1px solid #373737;
+  border-radius: 30px;
+  background-color: #1A1A1A;
+  padding: 10px;
+}
+.office .container .content-up .tab-content .up-card .contact-box .info-items .info-item:hover {
+  border-color: #703BF7;
+}
+.office .container .content-up .tab-content .up-card .contact-box .get-direction {
+  background-color: #703BF7;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.office .container .content-up #tab1:checked ~ .tab-labels label[for=tab1],
+.office .container .content-up #tab2:checked ~ .tab-labels label[for=tab2],
+.office .container .content-up #tab3:checked ~ .tab-labels label[for=tab3] {
+  background: #0c0c0c;
+  border-color: #703BF7;
+}
+.office .container .content-up #tab1:checked ~ .content #content1,
+.office .container .content-up #tab2:checked ~ .content #content2,
+.office .container .content-up #tab3:checked ~ .content #content3 {
+  display: block;
+}
+
+.estateins {
+  margin: 80px 0;
+}
+.estateins .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  border: 1px solid #373737;
+  border-radius: 10px;
+  background-color: #1A1A1A;
+  transition: 0.3s;
+}
+.estateins .container .content:hover {
+  border-color: #703BF7;
+}
+.estateins .container .content .image {
+  display: flex;
+  gap: 20px;
+}
+.estateins .container .content .image img {
+  max-width: 100%;
+}
+.estateins .container .content .double-img {
+  gap: 40px;
+}
+.estateins .container .content .double-img img {
+  width: 272px;
+}
+.estateins .container .content .text {
+  margin: auto;
+}
+.estateins .container .content .text h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.estateins .container .content .text p {
   color: #999999;
 }/*# sourceMappingURL=main.css.map */

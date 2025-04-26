@@ -1,0 +1,156 @@
+//information
+.information {
+  .container {
+    .content {
+      .contact-form {
+        @include grid(300px);
+      }
+    }
+  }
+}
+
+// Start Office
+.office {
+  .container {
+    .content-up {
+      .tabs {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .tab-labels {
+        display: flex;
+        cursor: pointer;
+        margin-bottom: $base-margin * 3;
+        background-color: $bg-color;
+        border-radius: $base-border-radius * 2;
+        padding: $base-padding;
+        width: fit-content;
+      }
+
+      .tab-labels label {
+        padding: 10px 30px;
+        background: $bg-color;
+        margin-right: 10px;
+        border-radius: $base-border-radius;
+        border: $base-border-thikness * 2 solid $border-color;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      .tab-content {
+        display: none;
+        .up-card {
+          display: flex;
+          gap: 15px;
+          .contact-box {
+            padding: $base-padding;
+            border: 1px solid $border-color;
+            padding: 15px;
+            border-radius: $base-border-radius * 2;
+            flex-basis: 50%;
+            small {
+              font-size: 13px;
+            }
+
+            h2 {
+              margin: $base-margin * 2 0;
+            }
+            p {
+              color: $text-color;
+            }
+
+            .info-items {
+              margin: $base-margin * 2 0;
+              display: flex;
+              gap: $base-gap/2;
+              margin-bottom: $base-margin * 2;
+
+              .info-item {
+                border: $base-border-thikness solid $border-color;
+                border-radius: $base-border-radius * 6;
+                background-color: $bg-color;
+                padding: $base-padding;
+
+                &:hover {
+                  border-color: $primary-color;
+                }
+              }
+            }
+
+            .get-direction {
+              background-color: $primary-color;
+              padding: $base-padding * 1.5;
+              border-radius: $base-border-radius * 2;
+              width: 100%;
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      #tab1:checked ~ .tab-labels label[for="tab1"],
+      #tab2:checked ~ .tab-labels label[for="tab2"],
+      #tab3:checked ~ .tab-labels label[for="tab3"] {
+        background: #0c0c0c;
+        border-color: $primary-color;
+      }
+
+      #tab1:checked ~ .content #content1,
+      #tab2:checked ~ .content #content2,
+      #tab3:checked ~ .content #content3 {
+        display: block;
+      }
+    }
+  }
+}
+
+// Start estateins 
+.estateins{
+  margin: $base-margin*8 0;
+  .container{
+    .content{
+      @include grid(450px);
+      padding: $base-padding*4;
+      border: $base-border-thikness solid $border-color;
+      border-radius: $base-border-radius*2;
+      background-color: $bg-color;
+      transition: $main-transition;
+      &:hover{
+        border-color: $primary-color;
+      }
+
+
+      .image{
+        display: flex;
+        gap: $base-gap;
+
+        img{
+          max-width: 100%;
+        }
+      }
+
+      .double-img{
+        gap: $base-gap*2;
+        img{
+          width: 272px;
+        }
+      }
+
+      .text{
+        margin: auto;
+        h3{
+          font-size: $base-font-size*3;
+          margin-bottom: $base-margin*2;
+        }
+
+        p{
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

@@ -151,17 +151,17 @@
   }
 
   .nav-bar {
-    margin: $base-margin*3 0;
+    margin: $base-margin * 3 0;
     .container {
       .nav-bar-1 {
-        width: 100%!important;
-        margin-top: $base-margin*6!important;
-        margin-bottom: $base-margin*2!important;
-        border-radius: $base-border-radius*2!important;
+        width: 100% !important;
+        margin-top: $base-margin * 6 !important;
+        margin-bottom: $base-margin * 2 !important;
+        border-radius: $base-border-radius * 2 !important;
         .input-box {
           input {
             &::placeholder {
-              font-size: $base-font-size!important;
+              font-size: $base-font-size !important;
             }
           }
         }
@@ -172,6 +172,32 @@
 
         .search-btn {
           display: block !important;
+        }
+      }
+    }
+  }
+
+  .unlock,
+  .managment {
+    .boxs {
+      .box {
+        &:last-child {
+          grid-column: span 1!important;
+        }
+      }
+    }
+  }
+
+  .office{
+    .content-up{
+      .tab-content{
+        .up-card{
+          flex-direction: column;
+          .contact-box{
+            .info-items{
+              flex-direction: column;
+            }
+          }
         }
       }
     }
